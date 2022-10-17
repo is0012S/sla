@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <label>Primeiro número:</label>
+    <br>
+    <input id="pnumero" type="number">
+    <br>
+    <label>Segundo múmero:</label>
+    <br>
+    <input id="snumero" type="number">
+    <br>
+    <button onclick="soma()">+</button>
+    <button onclick="subt()">-</button>
+    <button onclick="mult()">*</button>
+    <button onclick="divis()">/</button>
+    <br>
+    <br>
+    Resultado: <span></span>
+
+   <script>
+    var pnumero = document.querySelector('#pnumero')
+    var snumero = document.querySelector('#snumero')
+    var resultado = document.querySelector('span')
+
+    function soma(){
+        resultado.innerHTML = parseInt(pnumero.value) + parseInt(snumero.value)            
+    }
+    function subt(){
+        resultado.innerHTML = parseInt(pnumero.value) - parseInt(snumero.value)    
+    }
+    function mult(){
+        resultado.innerHTML = parseInt(pnumero.value) * parseInt(snumero.value)    
+    }
+    function divis(){
+        resultado.innerHTML = parseInt(pnumero.value) / parseInt(snumero.value)    
+    }
+   </script>
+   
+</body>
+</html>
